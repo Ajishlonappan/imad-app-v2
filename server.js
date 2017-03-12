@@ -14,16 +14,16 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/articleone/', function (req, res) {
-  res.sendFile(path.join('Article one url will be delivered'));
+  res.send('Article one url will be delivered');
 });
 
 app.get('/articletwo/', function (req, res) {
-  res.sendFile(path.join('Article two url will be delivered'));
+  res.send('Article two url will be delivered');
 });
 
 
 app.get('/articlethree/', function (req, res) {
-  res.sendFile(path.join('Article three url will be delivered'));
+  res.send('Article three url will be delivered');
 });
 
 app.get('/ui/madi.png', function (req, res) {

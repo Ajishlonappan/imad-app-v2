@@ -5,6 +5,64 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var content ={
+    title: 'Articleone |Ajish',
+    heading: 'Articleone',
+    date: '5 Sep 2017',
+    content:    `<p>
+            This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+        </p>
+        
+        <p>
+            This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+        </p>
+  
+        <p>
+            This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+        </p>`
+};
+functioncreateTemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading= data.heading;
+    var content= data.content;
+    var htmlTemplate= `
+<html> 
+<head>
+    <title>
+    $(title)
+    </title>
+    
+   
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/ui/style.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class= "container">
+         <div>
+         <a href = "/"> Home </a>   
+        </div>
+        <hr/>
+        <h>
+            &(title) 
+        </h>
+        <div>
+             $(date)  
+        </div>
+        <div>
+             $(content)
+        </div>
+    </div>
+
+</body>
+</html>`;
+return htmlTemplate;
+}
+
+var temltemplate{};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -14,7 +72,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/articleone', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'articleone.html'))
+ res.sendFile(htmlTemplate(Articleone))
 });
 
 app.get('/articletwo', function (req, res) {

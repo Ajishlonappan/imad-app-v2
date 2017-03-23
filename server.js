@@ -22,7 +22,7 @@ var content ={
             This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
         </p>`
 };
-functioncreateTemplate(data){
+function createTemplate(data){
     var title = data.title;
     var date = data.date;
     var heading= data.heading;
@@ -62,7 +62,7 @@ functioncreateTemplate(data){
 return htmlTemplate;
 }
 
-var temltemplate{};
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -72,7 +72,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/articleone', function (req, res) {
- res.sendFile(htmlTemplate(Articleone))
+ res.sendFile(htmlTemplate(Articleone));
 });
 
 app.get('/articletwo', function (req, res) {

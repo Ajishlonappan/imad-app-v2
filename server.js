@@ -6,22 +6,52 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone ={
-    title: 'Articleone |Ajish',
-    heading: 'Articleone',
-    date: '5 Sep 2017',
-    content:    `<p>
-            This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
-        </p>
+var articles ={
+                articleone : {
+                                title: 'Articleone |Ajish',
+                                heading: 'Articleone',
+                                date: '5 Sep 2017',
+                                content:    `<p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>
+                                    
+                                    <p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>
+                              
+                                    <p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>`
+                                 }
+                                    
+                                    
+                 articletwo: {
+                                title: 'Articletwo |Ajish',
+                                heading: 'Articletwo',
+                                date: '5 Sep 2017',
+                                content:    `<p>
+                                        This is my second  aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>
+                                ; 
+                                    
+                articlethree : {
+                                title: 'Articleone |Ajish',
+                                heading: 'Articlethree',
+                                date: '5 Sep 2017',
+                                content:    `<p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>
+                                    
+                                    <p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>
+                              
+                                    <p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>`
+                                };
+                };
         
-        <p>
-            This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
-        </p>
-  
-        <p>
-            This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
-        </p>`
-};
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -70,8 +100,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/articleone', function (req, res) {
- res.send(createTemplate(articleone));
+app.get('/:articleName, function (req, res) {
+ res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/articletwo', function (req, res) {

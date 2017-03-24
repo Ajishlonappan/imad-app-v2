@@ -22,10 +22,10 @@ var articles ={
                                     <p>
                                         This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
                                     </p>`
-                                 }
+                                 },
                                     
                                     
-               'articletwo' : {
+               'articletwo':{
                                 title: 'Articleone |Ajish',
                                 heading: 'Articleone',
                                 date: '5 Sep 2017',
@@ -40,7 +40,7 @@ var articles ={
                                     <p>
                                         This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
                                     </p>`
-                                 }
+                                 },
                                     
                 'articlethree' : {
                                 title: 'Articleone |Ajish',

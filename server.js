@@ -25,18 +25,9 @@ var articles ={
                                  }
                                     
                                     
-                 articletwo: {
-                                title: 'Articletwo |Ajish',
-                                heading: 'Articletwo',
-                                date: '5 Sep 2017',
-                                content:    `<p>
-                                        This is my second  aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
-                                    </p>
-                                ; 
-                                    
-                articlethree : {
+               articleone : {
                                 title: 'Articleone |Ajish',
-                                heading: 'Articlethree',
+                                heading: 'Articleone',
                                 date: '5 Sep 2017',
                                 content:    `<p>
                                         This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
@@ -49,8 +40,18 @@ var articles ={
                                     <p>
                                         This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
                                     </p>`
-                                };
-                };
+                                 }}
+                                    
+                articlethree : {
+                                title: 'Articleone |Ajish',
+                                heading: 'Articlethree',
+                                date: '5 Sep 2017',
+                                content:    `<p>
+                                        This is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    his is my test aricle.  This is my test aricle.  This is my test aricle.  This is my test aricle  This is my test aricle  This is my test aricle
+                                    </p>`
+                 }
+            };
         
 function createTemplate(data){
     var title = data.title;

@@ -15,7 +15,7 @@ request.onreadystatechange = function(){
   }
 }
 // Make request
-request.open('GET','http://127.0.0.1:8080/counter', true);
+request.open('GET','http://ajishlonappan.imad.hasura-app.io/counter', true);
 request.send(null);
 
 };
@@ -48,6 +48,6 @@ submit.onclick = function()
   }
     var nameInput =document.getElementById('name');
     var name= nameInput.value;
-    request.open('GET','http://127.0.0.1:8080/submit_name:name?name=' + name, true);
+    request.open('GET','http://ajishlonappan.imad.hasura-app.io/submit_name:name?name=' + name, true);
     request.send();
 };
